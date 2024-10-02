@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-{{.Release.Name}}
+  name: svc-{{.Release.Name}}
+spec:
+  ports:
+  - port: 6789
+    protocol: TCP
+    targetPort: 6789
+  selector:
+    app: deploy-{{.Release.Name}}
+  type: {{ .Values.serviceType }}
+status:
+  loadBalancer: {}

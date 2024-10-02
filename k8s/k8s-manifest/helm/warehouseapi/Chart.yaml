@@ -1,0 +1,25 @@
+apiVersion: v2
+name: warehouseapi
+description: A Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes to the chart.
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be incremented each time you make changes to the application.
+appVersion: "1.0.0"
+
+# The icon is a URL to an SVG or PNG image to be used as an icon for this chart.
+icon: https://example.com/icon.png
+
+# The maintainers field should contain a list of name and email addresses of the maintainers for the chart.
+maintainers:
+  - name: Prajwal
+    email: prajwalt3498@duck.com
+    
+# The sources field should contain a list of URLs to source code for the chart.
+sources:
+  - https://github.com/your-repo/warehouseapi
+

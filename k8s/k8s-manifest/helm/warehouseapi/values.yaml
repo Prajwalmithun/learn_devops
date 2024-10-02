@@ -1,0 +1,6 @@
+# This block is for deployment-warehouseapi.yaml
+replicas: 2
+image: "prajwal3498/warehouseapi:latest"
+
+# This block is for service-warehouseapi.yaml
+serviceType: "NodePort"
