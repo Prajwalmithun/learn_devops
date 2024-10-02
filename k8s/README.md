@@ -34,9 +34,31 @@ To understand what Kubernetes is good for, let's look at some examples:
 
 </b></details>
 
+<details>
+<summary> Imperative vs Declarative approach in Kubernetes </summary><br><b>
+
+  - Imperative: In the imperative approach, you tell Kubernetes what to do by running specific commands directly. This is similar to running a shell command to perform a task.
+    Example:
+    ```
+    kubectl run nginx --image=nginx
+    kubectl delete pod nginx
+    kubectl expose deployment nginx --port=80
+    ```
+
+  - Declarative: In the declarative approach, you tell Kubernetes what the desired state of the system should be by providing configuration files (YAML or JSON), and Kubernetes ensures that the system matches this desired state.
+
+    Example:
+    ```
+    STEP 1: Create a deployment.yaml and service.yaml file
+    STEP 2: Apply these files to the cluster
+        # kubectl apply -f deployment.yaml
+        # kubectl apply -f service.yaml
+    ```
+</b></details>
+
 ## Kubernetes Architecture
 
-
+![Kubernetes Architecture Diagram](./images/kubernetes-cluster-architecture.svg)
 
 ## Kubernetes Components 
 
