@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-warehouseapi
+  name: svc-warehouseapi
+spec:
+  ports:
+  - port: 6789
+    protocol: TCP
+    targetPort: 6789
+  selector:
+    app: deploy-warehouseapi
+  type: NodePort
+status:
+  loadBalancer: {}

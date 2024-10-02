@@ -139,10 +139,16 @@ Helm is a package manager for Kubernetes that allows you to define, install, and
 # minikube start
 ```
 3. Write Kubernetes manifest files
+```
+# kubectl create deployment deploy-warehouseapi --image=prajwalt3498/warehouseapi:latest --replicas=2 --dry-run=client -o yaml > deployment-warehouseap
+i.yaml
+
+# kubectl expose deployment deploy-warehouseapi --type=NodePort --port=6789 --name=svc-warehouseapi --dry-run=client -o yaml > service-warehouseapi.yaml
+```
 4. Deploy the application to Minikube (using kubectl and manifest files)
 ```
-# kubectl apply -f deployment.yaml
-# kubectl apply -f service.yaml
+# kubectl apply -f deployment-warehouseapi.yaml
+# kubectl apply -f service-warehouseapi.yaml
 
 # minikube service <SERVICE_NAME_FROM_SERVICE.YAML>
 ```
