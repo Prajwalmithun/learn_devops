@@ -37,7 +37,7 @@ The following table lists the configurable parameters of the WarehouseAPI chart 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example:
 
 ```sh
-helm install warehouseapi . --set image.tag=1.0.0
+helm install warehouseapi . --set replicas=5
 ```
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example:
